@@ -1,7 +1,8 @@
-module.exports = {
+modules.export = {
   root: true,
   env: {
-    node: true
+    node: true,
+    'cypress/globals': true
   },
   'extends': [
     'eslint:recommended',
@@ -27,5 +28,5 @@ module.exports = {
   parserOptions: {
     parser: '@typescript-eslint/parser'
   },
-  plugins: ['vuetify', '@typescript-eslint']
+  plugins: ['vuetify', '@typescript-eslint', 'cypress']
 }
