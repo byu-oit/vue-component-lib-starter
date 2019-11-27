@@ -2,7 +2,7 @@
 
 > A template project for creating more vue component libraries
 
-### Introduction
+## Introduction
 
 **It is *highly recommended* that you understand the material in the References section below before contributing to this component library.**
 
@@ -21,7 +21,7 @@ While building components:
 
 In summary, it can be easy to try to abstract too much and end up creating a feature that is never used
 
-### Getting Started
+## Getting Started
 
 1. **Create a demo page** in the pages directory. This page will show-off your new component and make it testable.
 2. **Add the demo page** to the layout/default.vue page (follow the example that's already there). This will make your demo page visible in the menu.
