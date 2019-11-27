@@ -2,7 +2,7 @@ version: 1
 update_configs:
   - package_manager: "javascript"
     directory: "/"
-    target_branch: dev
+    target_branch: master
     update_schedule: weekly
     default_reviewers:
       - stuft2
