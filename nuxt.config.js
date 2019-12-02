@@ -1,4 +1,5 @@
 import * as pkg from './package.json'
+console.log('PKG NAME:', pkg.name)
 const packageName = pkg.name.startsWith('@byu-oit')
   ? pkg.name.substring(8)
   : pkg.name
