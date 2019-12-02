@@ -1,4 +1,8 @@
 import * as pkg from './package.json'
+const packageName = pkg.name.startsWith('@byu-oit')
+  ? pkg.name.substring(8)
+  : pkg.name
+
 module.exports = {
   mode: 'spa',
   /*
@@ -59,11 +63,14 @@ module.exports = {
       }
     }
   },
+  /*
+   ** Generate the docs directory for the demo on GitHub Pages
+   */
   generate: {
     dir: 'docs'
   },
   router: {
-    base: pkg.name
+    base: packageName
   },
   /*
    ** Build configuration
