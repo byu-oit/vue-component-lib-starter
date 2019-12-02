@@ -14,7 +14,7 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.2.4",
+    "@nuxt/typescript-runtime": "^0.2.7",
     "nuxt": "^2.0.0",
     "nuxt-property-decorator": "^2.5.0"
   },
