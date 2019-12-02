@@ -58,6 +58,9 @@ module.exports = {
       }
     }
   },
+  generate: {
+    dir: 'demo'
+  },
   /*
    ** Build configuration
    */

@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
-    "build": "./build.sh",
+    "build:components": "del 'dist' && make-dir dist && cpy 'components/atoms/*.vue' dist && cpy 'components/molecules/*.vue' dist && cpy 'components/organisms/*.vue' dist\n",
+    "build:demo": "nuxt-ts generate",
+    "build": "npm run build:components && npm run build:demo",
     "lint": "eslint --ext .ts,.vue --ignore-path .gitignore . --fix",
     "test": "cypress run",
     "test:open": "cypress open"
