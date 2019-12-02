@@ -59,7 +59,7 @@ module.exports = {
     }
   },
   generate: {
-    dir: 'demo'
+    dir: 'docs'
   },
   /*
    ** Build configuration
