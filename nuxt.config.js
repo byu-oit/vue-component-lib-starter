@@ -70,7 +70,7 @@ module.exports = {
     dir: 'docs'
   },
   router: {
-    base: packageName
+    base: `/${packageName}/`
   },
   /*
    ** Build configuration
