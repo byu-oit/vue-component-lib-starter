@@ -1,10 +1,10 @@
-const { home } = require('../globals')
+const { home } = require('../globals/index.json')
 
-describe('Home page', function() {
-  it('can visit home page', function() {
+describe('Home page', () => {
+  it('can visit home page', () => {
     cy.visit(home)
   })
-  it('can click to the example component', function () {
+  it('can click to the example component', () => {
     cy.visit(home) // Visit home page
     cy.get('.v-app-bar__nav-icon').click() // get DOM element by CSS selector
     cy.contains('Atoms').click() // Get DOM element by text "Atoms"

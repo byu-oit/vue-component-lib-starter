@@ -1,7 +1,7 @@
 {
   "baseUrl": "http://localhost:8080",
   "fixturesFolder": "test/globals",
-  "integrationFolder": "test/unit",
+  "integrationFolder": "test/integrations",
   "pluginsFile": "test/plugins",
   "screenshotsFolder": "test/screenshots",
   "supportFile": "test/support",

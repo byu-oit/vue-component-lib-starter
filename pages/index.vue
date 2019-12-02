@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-spacer></v-spacer>
+      <v-spacer />
       <v-col cols="8">
         <v-card>
           <v-card-title class="headline">
@@ -75,6 +75,25 @@
             <v-card flat>
               <v-card-title>Getting Started</v-card-title>
               <v-card-text>
+                <p>
+                  <strong>IMPORTANT</strong>: If you are just starting a new
+                  library, make sure to do the following:
+                </p>
+                <ol>
+                  <li>
+                    Update the name & description in the package.json file
+                  </li>
+                  <li>
+                    Update the .dependabot/config.yml with the right maintainer
+                    configuration.
+                  </li>
+                  <li>(Optional) Update the README title.</li>
+                </ol>
+              </v-card-text>
+            </v-card>
+            <v-card flat>
+              <v-card-title>Adding Components</v-card-title>
+              <v-card-text>
                 <ol>
                   <li>
                     <strong>Create a demo page</strong> in the pages directory.
@@ -96,10 +115,10 @@
                     the test/unit directory.
                   </li>
                   <li>
-                    <strong>Start Test Driven Development!</strong> You can
-                    run tests by first starting the development server
-                    (<strong>npm run dev</strong>) and then by running the
-                    cypress tests:
+                    <strong>Start Test Driven Development!</strong> You can run
+                    tests by first starting the development server (<strong
+                      >npm run dev</strong
+                    >) and then by running the cypress tests:
                     <ul>
                       <li>Headless: <strong>npm test</strong></li>
                       <li>Cypress: <strong>npm test:open</strong></li>
@@ -116,6 +135,22 @@
               </v-card-text>
             </v-card>
             <v-card flat>
+              <v-card-title>Publishing & Consuming Components</v-card-title>
+              <v-card-text>
+                <p>
+                  Before publishing your components to NPM, you'll need to run
+                  the build process, which will cleanly copy only the relevant
+                  Vue files to the dist directory. Running NPM publish will only
+                  publish this directory.
+                </p>
+                <p>
+                  To consume components after publishing them, install the
+                  package in your project and then import the components you
+                  need.
+                </p>
+              </v-card-text>
+            </v-card>
+            <v-card flat>
               <v-card-title>References</v-card-title>
               <v-card-text>
                 <div v-for="reference of references" :key="reference.link">
@@ -128,7 +163,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-spacer></v-spacer>
+      <v-spacer />
     </v-row>
   </v-container>
 </template>
@@ -163,7 +198,8 @@ export default class HomePage extends Vue {
     },
     {
       text: 'Testing with Cypress',
-      link: 'https://docs.cypress.io/guides/getting-started/writing-your-first-test.html'
+      link:
+        'https://docs.cypress.io/guides/getting-started/writing-your-first-test.html'
     },
     {
       text: 'Cypress Documentation',

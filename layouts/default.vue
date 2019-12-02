@@ -29,15 +29,15 @@
             exact
           >
             <v-list-item-action>
-              <v-icon>{{
-                component.icon || 'mdi-alert-circle-outline'
-              }}</v-icon>
+              <v-icon>
+                {{ component.icon || 'mdi-alert-circle-outline' }}
+              </v-icon>
             </v-list-item-action>
 
             <v-list-item-content>
-              <v-list-item-title>{{
-                component.title || 'Untitled'
-              }}</v-list-item-title>
+              <v-list-item-title>
+                {{ component.title || 'Untitled' }}
+              </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-group>
@@ -89,11 +89,13 @@ export default class DefaultView extends Vue {
       components: []
     }
   }
+
   private home = {
     icon: 'mdi-home',
     title: 'Home',
     to: '/'
   }
+
   private title = pkg.description
 }
 </script>
