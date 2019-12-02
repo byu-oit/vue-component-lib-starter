@@ -1,8 +1,3 @@
-import * as pkg from './package.json'
-const packageName = pkg.name.startsWith('@byu-oit/')
-  ? pkg.name.substring(9)
-  : pkg.name
-
 module.exports = {
   mode: 'spa',
   /*
@@ -68,9 +63,6 @@ module.exports = {
    */
   generate: {
     dir: 'docs'
-  },
-  router: {
-    base: `/${packageName}/`
   },
   /*
    ** Build configuration
