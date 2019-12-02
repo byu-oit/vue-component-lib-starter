@@ -1,3 +1,4 @@
+import * as pkg from './package.json'
 module.exports = {
   mode: 'spa',
   /*
@@ -60,6 +61,9 @@ module.exports = {
   },
   generate: {
     dir: 'docs'
+  },
+  router: {
+    base: pkg.name
   },
   /*
    ** Build configuration
