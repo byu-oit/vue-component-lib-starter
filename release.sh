@@ -6,15 +6,15 @@ fi
 
 if [[ -z $(git status -s) ]]
 then
-  git checkout -b release
-  git merge master
+  git checkout master
+  git merge dev
 
   npm run build
   git add ./docs/*
   git commit ./docs/* -m "Updating docs"
 
-  git push origin release
-  git checkout master
+  git push origin master
+  git checkout dev
 else
   echo "Please commit any changes before merging to release"
   exit 1
