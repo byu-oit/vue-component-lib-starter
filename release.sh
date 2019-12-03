@@ -4,14 +4,15 @@ if [[ "$BRANCH" != "master" ]]; then
   exit 1;
 fi
 
-npm run build
-git add ./docs/*
-git commit ./docs/* -m "Updating docs"
-
 if [[ -z $(git status -s) ]]
 then
-  git checkout release
+  git checkout -b release
   git merge master
+
+  npm run build
+  git add ./docs/*
+  git commit ./docs/* -m "Updating docs"
+
   git push origin release
   git checkout master
 else
