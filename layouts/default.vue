@@ -49,8 +49,10 @@
       <v-spacer />
     </v-app-bar>
     <v-content>
-      <v-container>
-        <nuxt />
+      <v-container fluid>
+        <v-row no-gutters>
+          <nuxt />
+        </v-row>
       </v-container>
     </v-content>
     <v-footer fixed app>
