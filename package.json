@@ -5,10 +5,9 @@
   "author": "Spencer Tuft",
   "private": true,
   "scripts": {
+    "build": "del 'dist' && make-dir dist && cpy 'components/atoms/*.vue' dist && cpy 'components/molecules/*.vue' dist && cpy 'components/organisms/*.vue' dist",
     "dev": "nuxt-ts",
-    "build:components": "del 'dist' && make-dir dist && cpy 'components/atoms/*.vue' dist && cpy 'components/molecules/*.vue' dist && cpy 'components/organisms/*.vue' dist",
-    "build:demo": "DEPLOY_ENV=GH_PAGES nuxt-ts generate",
-    "build": "npm run build:components && npm run build:demo",
+    "generate": "DEPLOY_ENV=GH_PAGES nuxt-ts generate",
     "lint": "eslint --ext .ts,.vue --ignore-path .gitignore . --fix",
     "test": "cypress run",
     "test:open": "cypress open"
