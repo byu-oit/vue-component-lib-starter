@@ -6,12 +6,12 @@ fi
 
 if [[ -z $(git status -s) ]]
 then
-  git checkout master
-  git merge ${BRANCH}
-
   npm run build
   git add ./docs/*
   git commit ./docs/* -m "Updating docs"
+
+  git checkout master
+  git merge ${BRANCH}
 
   git push origin master
   git checkout ${BRANCH}
