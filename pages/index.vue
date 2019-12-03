@@ -76,6 +76,11 @@
               <v-card-title>Getting Started</v-card-title>
               <v-card-text>
                 <p>
+                  Development occurs on a non-master branch. It is
+                  <i>recommended</i> to merge into the master branch and pushed
+                  to github via the release script (<code>./release.sh</code>).
+                </p>
+                <p>
                   <strong>IMPORTANT</strong>: If you are just starting a new
                   library, make sure to do the following:
                 </p>

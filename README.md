@@ -23,6 +23,8 @@ In summary, it can be easy to try to abstract too much and end up creating a fea
 
 ## Getting Started
 
+Development occurs on a non-master branch. It is _recommended_ to merge into the master branch and pushed to github via the release script (`./release.sh`). 
+
 **IMPORTANT**: If you are just starting a new library, make sure to do the following:
 1. Change the name & description in the package.json file
 2. Update the .dependabot/config.yml with the right maintainer configuration.
