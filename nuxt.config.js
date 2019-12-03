@@ -1,3 +1,13 @@
+import { name } from './package.json'
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: `/${name.startsWith('@byu-oit/') ? name.substring(9) : name}/`
+        }
+      }
+    : {}
+
 module.exports = {
   mode: 'spa',
   /*
@@ -60,10 +70,15 @@ module.exports = {
   },
   /*
    ** Generate the docs directory for the demo on GitHub Pages
+   ** https://nuxtjs.or/faq/github-pages/
    */
   generate: {
     dir: 'docs'
   },
+  /*
+   ** Address incompatibilities with GitHub pages and running local dev server
+   */
+  ...routerBase,
   /*
    ** Build configuration
    */
