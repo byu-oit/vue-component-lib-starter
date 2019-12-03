@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
-    "build:components": "del 'dist' && make-dir dist && cpy 'components/atoms/*.vue' dist && cpy 'components/molecules/*.vue' dist && cpy 'components/organisms/*.vue' dist\n",
+    "build:components": "del 'dist' && make-dir dist && cpy 'components/atoms/*.vue' dist && cpy 'components/molecules/*.vue' dist && cpy 'components/organisms/*.vue' dist",
     "build:demo": "DEPLOY_ENV=GH_PAGES nuxt-ts generate",
     "build": "npm run build:components && npm run build:demo",
     "lint": "eslint --ext .ts,.vue --ignore-path .gitignore . --fix",
