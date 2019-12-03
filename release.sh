@@ -5,6 +5,8 @@ if [[ "$BRANCH" != "master" ]]; then
 fi
 
 npm run build
+git add ./docs/*
+git commit ./docs/* -m "Updating docs"
 
 if [[ -z $(git status -s) ]]
 then
