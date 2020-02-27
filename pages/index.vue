@@ -2,7 +2,9 @@
   <v-container>
     <v-row>
       <v-col>
-        <h1 class="font-weight-light text-center">Welcome to Your New Vue Component Library!</h1>
+        <h1 class="font-weight-light text-center">
+          Welcome to Your New Vue Component Library!
+        </h1>
       </v-col>
     </v-row>
   </v-container>

@@ -2,7 +2,7 @@
   "name": "vue-component-lib-starter",
   "version": "1.0.0",
   "description": "Vue TypeScript Component Library Starter",
-  "author": "Spencer Tuft",
+  "author": "Spencer Tuft<stuft2@byu.edu>",
   "private": true,
   "scripts": {
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
