@@ -9,6 +9,7 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   mode: 'spa',
+  ...routerBase,
   /*
   ** Headers of the page
   */
@@ -55,7 +56,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
-  router: routerBase,
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -67,7 +67,6 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
     theme: {
       light: true,
       themes: {
