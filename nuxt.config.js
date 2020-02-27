@@ -1,5 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: `/${process.env.npm_package_name}/`
+  }
+} : {}
+
 export default {
   mode: 'spa',
   /*
@@ -48,6 +55,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  router: routerBase,
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
