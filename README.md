@@ -1,4 +1,6 @@
 # vue-component-lib-starter
+Due to the unique and complex nature of enterprise applications, this repository should be considered an example
+repository rather than a template repository.
 
 > Vue TypeScript Component Library Starter
 
